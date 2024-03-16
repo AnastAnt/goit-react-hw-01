@@ -1,3 +1,6 @@
+import Profile from "./components/Profile";
+import userData from "./userData.json";
+
 const App = () => {
   return (
     <>
@@ -11,3 +14,4 @@ const App = () => {
     </>
   );
 };
+export default App;
