@@ -1,41 +1,46 @@
 import styles from "./Profile.module.css";
+import PropTypes from "prop-types";
 
 const Profile = ({ name, tag, location, image, stats }) => {
   const { followers, views, likes } = stats;
 
   return (
     <div className={styles.profile}>
-      <div>
-        <img src={image} alt="User avatar" />
-        <p>
-          <strong>{name}</strong>
-        </p>
-        <p className={styles.pOpac}>@{tag}</p>
-        <p className={styles.pOpac}>{location}</p>
+      <div className={styles.description}>
+        <img src={image} alt="User avatar" className={styles.avatar} />
+        <p className={styles.name}>{name}</p>
+        <p className={styles.tag}>@{tag}</p>
+        <p className={styles.location}>{location}</p>
       </div>
 
-      <ul>
+      <ul className={styles.stats}>
         <li>
-          <span>Followers</span>
-          <span>
-            <strong>{followers}</strong>
-          </span>
+          <span className={styles.label}>Followers</span>
+          <span className={styles.quantity}>{followers}</span>
         </li>
         <li>
-          <span>Views</span>
-          <span>
-            <strong>{views}</strong>
-          </span>
+          <span className={styles.label}>Views</span>
+          <span className={styles.quantity}>{views}</span>
         </li>
         <li>
-          <span>Likes</span>
-          <span>
-            <strong>{likes}</strong>
-          </span>
+          <span className={styles.label}>Likes</span>
+          <span className={styles.quantity}>{likes}</span>
         </li>
       </ul>
     </div>
   );
+};
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 export default Profile;

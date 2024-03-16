@@ -1,22 +1,7 @@
-.friend-item {
+.friendList {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.friend-avatar {
-  margin-right: 10px;
-}
-
-.friend-status {
-  font-weight: bold;
-  margin-left: auto;
-}
-
-.online {
-  color: green;
-}
-
-.offline {
-  color: red;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  padding: 0;
 }

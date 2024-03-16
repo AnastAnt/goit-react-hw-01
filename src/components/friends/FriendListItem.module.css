@@ -1,9 +1,35 @@
-.friendList {
-  list-style-type: none;
-  padding: 0;
+.friend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #706f6f;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.name {
+  font-weight: 700;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 8px;
   padding: 0;
 }
-.friend-list {
-  list-style-type: none;
-  padding: 0;
+.friendStatus {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.friendStatus.online {
+  color: green;
+}
+
+.friendStatus.offline {
+  color: red;
 }
