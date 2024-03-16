@@ -1,20 +1,13 @@
-const Product = () => {
+const App = () => {
   return (
-    <div>
-      <h2>Cookies</h2>
-      <p>Price: 999 credits</p>
-    </div>
+    <>
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
+    </>
   );
 };
-
-export default function App() {
-  return (
-    <div>
-      <h1>Products</h1>
-
-      <Product />
-      <Product />
-      <Product />
-    </div>
-  );
-}
